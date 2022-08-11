@@ -1,0 +1,48 @@
+<!-- <div class="container-fluid" style="margin-top: 15px;width:77vw;"> -->
+<br>
+<br>
+<!-- <div class="card"> -->
+<div class="row">
+    <div class="col" style="margin-left: 1vw;padding-top: 16px;">
+        <label style="vertical-align: middle;text-align: center;display: inline-block;margin-top: 5px;margin-right: 20px;">Enter
+                  Employee ID</label>
+        <input class="form-control form-group " style="display: inline-block;margin-right: 20px;" type="text" maxlength="09" [(ngModel)]="employeeId" [ngStyle]="{'max-width.px': 250}" placeholder="Enter Employee ID">
+
+        <button class="btn btn-success" style="display: inline-block;" (click)="search();">Search</button>
+
+    </div>
+</div>
+<!-- </div> -->
+<br>
+<br>
+<!-- </div> -->
+<div class="card">
+    <!-- <div class="col-xl-12 table-responsive "> -->
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th style=" padding-bottom: 10px;padding-top: 10px;text-align:center;background-color: #E8E8E8;">
+                    Employee ID
+                </th>
+                <th style=" padding-bottom: 10px;padding-top: 10px;text-align:center;background-color: #E8E8E8;">
+                    Employee Name
+                </th>
+                <th style=" padding-bottom: 10px;padding-top: 10px;text-align:center;background-color: #E8E8E8;">
+                    Employee City
+                </th>
+                <th style=" padding-bottom: 10px;padding-top: 10px;text-align:center;background-color: #E8E8E8;">
+                    Employee Role
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of empDetailsId">
+                <td style="text-align: center;">{{data.employeeId}}</td>
+                <td style="text-align: center;">{{data.employeeName}}</td>
+                <td style="text-align: center;">{{data.employeeCity}}</td>
+                <td style="text-align: center;">{{data.employeeRole}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- </div> -->
+</div>
